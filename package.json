@@ -19,6 +19,8 @@
     "schema-utils": "^1.0.0"
   },
   "devDependencies": {
+    "@types/webpack": "^4.4.22",
+    "@types/webpack-env": "^1.13.6",
     "css-loader": "^0.28.0",
     "file-loader": "^1.0.0",
     "istanbul": "^0.4.5",

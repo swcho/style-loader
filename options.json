@@ -31,6 +31,9 @@
     },
     "convertToAbsoluteUrls": {
       "type": "boolean"
+    },
+    "universal": {
+      "type": "boolean"
     }
   },
   "additionalProperties": false

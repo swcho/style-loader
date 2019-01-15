@@ -1,6 +1,7 @@
 // Node v4 requires "use strict" to allow block scoped let & const
 "use strict";
 
+// @ts-check
 var MemoryFS = require("memory-fs");
 var realFs = require("fs");
 var webpack = require("webpack");
@@ -9,6 +10,9 @@ var jsdom = require("jsdom");
 
 var assert = require("assert");
 
+/**
+ * @type {import('webpack').Compiler}
+ */
 var compiler;
 var jsdomHtml;
 
