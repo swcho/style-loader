@@ -69,10 +69,9 @@ module.exports.pitch = function (request) {
 	return [
 		// Style Loader
 		// Adds CSS to the DOM by adding a <style> tag
-		"",
+		"console.log('style-loader/universal')",
 		// Load styles
 		"var content = require(" + loaderUtils.stringifyRequest(this, "!!" + request) + ");",
-		"console.log(content)",
 		"if(typeof content === 'string') content = [[module.id, content, '']];",
 		"",
 		// Transform styles",
@@ -87,7 +86,7 @@ module.exports.pitch = function (request) {
 		"options.insertInto = " + insertInto + ";",
 		"",
 		// Add styles to the DOM
-		"var update = require(" + loaderUtils.stringifyRequest(this, "!" + path.join(__dirname, "lib", "addStyles.js")) + ")(content, options);",
+		"var update = require(" + loaderUtils.stringifyRequest(this, "!" + path.join(__dirname, "lib", "addStylesNode.js")) + ")(content, options);",
 		"",
 		"if(content.locals) module.exports = content.locals;",
 		"",
